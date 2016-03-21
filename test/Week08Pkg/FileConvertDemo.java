@@ -51,7 +51,6 @@ public class FileConvertDemo
                 {
                     throw new Exception("File not found. Please try again.");
                 }
-
             } 
             catch (Exception e) // exception handling
             {
@@ -118,26 +117,23 @@ public class FileConvertDemo
                         correctInput = false;
                         continue;
                     }
-
                 } 
                 else 
                 {
                     outputFile.createNewFile();
                     break;
                 }
-
             } catch (Exception e) 
             {
                 //print error message
                 System.err.println(e.getMessage());
             }
         }
-
-        // Most important line of this program.       
+        // Cnvert file to string
         String formattedText = myFile.ConvertFileToString(inputFileName, lineLength);
         // The final output of this program
         StringBuilder endingString = new StringBuilder();
-        // add line of * to show what the correct line width should be.
+        // add line of '*' to show what the correct line width should be.
         int x;
         for (x = 0; x < lineLength; x++) 
         {
