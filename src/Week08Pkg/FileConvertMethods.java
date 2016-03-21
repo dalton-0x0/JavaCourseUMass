@@ -115,7 +115,7 @@ public class FileConvertMethods
 	return output.toString();
     }
     
-    // saves string to file
+    // method saves string to file
     public void SaveStringToFile(String fileName, String stringInput) 
     {
 	// use relative file path
@@ -137,7 +137,7 @@ public class FileConvertMethods
         System.out.println("OUTPUT file SAVED - press ENTER to end program.");
         String junk = input.nextLine();
     }
-
+    // file name method
     public String NewFileName(String type) 
     {
 	System.out.print(type + 
