@@ -6,7 +6,6 @@
 package PracticePkg;
 import java.util.Scanner;
 import java.lang.*;
- 
 /**
  *
  * @author Chike
@@ -19,34 +18,39 @@ public class TestMaxDemo
         int[] inputArgs = {val1, val2, val3};
         // arbitrarily assign max value to first element
         int maxVal = inputArgs[0];
-        int i = 0; // loop counter
+        // initialize loop counter
+        int i = 0; 
+        // loop through the array elements
         for (i = 0; i < inputArgs.length; i++)
         {
-            maxVal = (inputArgs[i] > maxVal) ? 
-                    inputArgs[i] : maxVal;
+            // use ternary operator
+            maxVal = (inputArgs[i] > maxVal) ? inputArgs[i] : maxVal;
         }
-        return (maxVal);
+        return (maxVal); // return maximum integer value
     }
     
     public static void main (String[] args)
     {
+        // new Scanner object
         Scanner keyboardScanner = new Scanner(System.in);
         
+        // initialize array for storage of keyboard inputs
         int[] intInput = {0, 0, 0};
         
+        // declare loop counter
         int i;
         
-        for (i=0; i < 3; i++)
+        // we know only 3 arguments from problem statement
+        for (i=0; i < 3; i++) 
         {
+            // prompt user for input and store in array
             System.out.println("Enter an integer: ");
             intInput[i] = keyboardScanner.nextInt();
         }
         
-         System.out.println("Input values are: " + intInput[0] + " " 
-                 + intInput[1] + " " + intInput[2] + ". Max value is " 
-                 + max(intInput[0], intInput[1], intInput[2]));
-        
-        System.out.println("Done - press enter key to end program");
-        String junk = keyboardScanner.nextLine();
+        // print results
+        System.out.println("Input values are: " + intInput[0] + ", " 
+                + intInput[1] + ", " + intInput[2] + ". " + "Max value is: " 
+                + max(intInput[0], intInput[1], intInput[2]) + ".");
     }
 }
