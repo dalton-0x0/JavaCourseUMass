@@ -10,7 +10,7 @@ import java.lang.*;
  *
  * @author Chike
  */
-public class TestString 
+public class TestStringDemo 
 {
     public static boolean isValidInt(String testIntVal)
     {
